@@ -4,4 +4,5 @@ root 'calculators#index'
 resources :calculators
 
 resources :users
+
 end
