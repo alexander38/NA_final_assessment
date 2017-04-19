@@ -9,17 +9,31 @@
   </head>
 
   <body>
-  		<% if current_user %>
-  			Signed in as <%= current_user.email %> | <%= link_to "Logout", '/logout' %>
-		<% else %>
-  			<%= link_to 'Login', '/login' %> | <%= link_to 'Sign Up', '/signup' %>
-		<% end %>
 
-  		<% flash.each do |name,msg| %>
-  			<%= content_tag :div, msg, id: "flash_#{name}" %>
-  		<% end %>
+  <nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/">Investment Calculator</a>
+    </div>
+    <ul class="nav navbar-nav navbar-right">
+        <% if current_user %>
+          <li> Signed in as <%= current_user.email %></li>
+          <li> <%= link_to "Logout", '/logout' %> </li>
+        <% else %>
+          <li><%= link_to 'Login', '/login' %></li>
+          <li><%= link_to 'Sign Up', '/signup' %></li>
+        <% end %>
+    </ul>
+  </div>
+</nav>
+    
+
+    <% flash.each do |name,msg| %>
+      <%= content_tag :div, msg, id: "flash_#{name}" %>
+    <% end %>
 
 
     <%= yield %>
+
   </body>
 </html>
