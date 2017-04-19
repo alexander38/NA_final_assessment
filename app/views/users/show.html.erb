@@ -1,9 +1,21 @@
 <h1><%= @user.email %></h1>
 
 <p>
-  subscription
+  subscription plan
 </p>
 
+<%= link_to 'Subcribe Now', new_charge_path %>
+
+<strong>Payment Status:</strong>
+     <% if @user.Charge.nil? %>
+      <span class="btn btn-danger"> NOT PAID </span>
+
+       <%= link_to 'Subcribe Now', new_charge_path + "?id=" + @user.id.to_s, class: "btn btn-warning"  %>
+      <% else %>
+      <span class="btn btn-success">PAID</span>
+      <% end %>
+  </li>
+</ul>
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>

@@ -58,7 +58,12 @@ gem 'bcrypt', '~>3.1.7'
 gem 'omniauth'
 gem 'omniauth-facebook'
 
+#prevent password from leaking to github
 gem 'figaro'
 
 gem 'bootstrap-sass', '~> 3.3.6'
+
+#subcription + payment
+gem 'stripe'
+
 
