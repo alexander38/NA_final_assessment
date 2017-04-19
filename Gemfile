@@ -55,3 +55,8 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 #An easy way to keep your users' passwords secure.
 gem 'bcrypt', '~>3.1.7'
 
+gem 'omniauth'
+gem 'omniauth-facebook'
+
+gem 'figaro'
+

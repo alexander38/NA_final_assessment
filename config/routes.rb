@@ -2,7 +2,6 @@ Rails.application.routes.draw do
 
 # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
  root 'calculators#index'
- resources :calculators
 
  resources :users
 
@@ -19,5 +18,9 @@ Rails.application.routes.draw do
   get '/signup' => 'users#new'
   post '/users' => 'users#create'
 
+
+
+  resources :users, controller: "users", only: :show
+  get "/auth/:provider/callback" => "sessions#create_from_omniauth"
 
 end
