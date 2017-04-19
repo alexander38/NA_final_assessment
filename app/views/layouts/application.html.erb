@@ -16,6 +16,7 @@
       <a class="navbar-brand" href="/">Investment Calculator</a>
     </div>
     <ul class="nav navbar-nav navbar-right">
+      <li><%= link_to "Profile", user_path(current_user) %></li>
         <% if current_user %>
           <li> Signed in as <%= current_user.email %></li>
           <li> <%= link_to "Logout", '/logout' %> </li>
