@@ -1,66 +1,95 @@
-
 <div class="jumbotron text-center">
   <h1>Welcome to Investment Calculator</h1>
 </div>
 
-<div class="container">
-  <div class="row">
+<body>
+<!-- search using select tag -->
+<div align="center">
+  <form id="search-calculator" action="/calculators/calculator" method="post" data-remote="true">
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+    <select name="calculator[search]">
+      <option >Choose Calculator</option>
+      <option value="cal1">Taxable vs. tax-free investment return</option>
+      <option value="cal2">Value of bond</option>
+      <option value="cal3">Value of compound interest</option>
+      <option value="cal4">Value of a call or put option</option>
+      <option value="cal5">Taxable vs. tax-advantaged savings</option>
+      <option value="cal6">Long-term impact of increased return</option>
+      <option value="cal7">Certificate of deposit (CD) analyzer</option>
+      <option value="cal8">Dividend yield on a stock</option>
+      <option value="cal9">Expenses impact mutual fund returns</option>
+    </select>
+    <input type="submit" value="submit">
+  </form>
+</div>
+<br>
 
+  <div class="container">
+  <div align="center">
+  <button>
+    <%= link_to "Subscribe Today for only $5", user_path(current_user) %></
+  </button> 
+</div>
+<br>
+
+<div class="row">
     <div class="col-sm-4">
       <div>
-				<iframe id="tax-free" src="http://www.calcxml.com/do/inv02?teaser" height="300" width="340" frameborder="0"></iframe><br/>
+				<iframe id="cal1" src="http://www.calcxml.com/do/inv02?teaser" height="300" width="340" frameborder="0"></iframe><br/>
 			</div>
     </div>
 
     <div class="col-sm-4">
       	<div>
-				<iframe src="http://www.calcxml.com/do/inv03?teaser" height="300" width="340" frameborder="0"></iframe><br/>
+				<iframe id="cal2" src="http://www.calcxml.com/do/inv03?teaser" height="300" width="340" frameborder="0"></iframe><br/>
 				</div>
     </div>
 
     <div class="col-sm-4">
       <div>
-      	<iframe src="http://www.calcxml.com/do/inv05?teaser" height="300" width="340" frameborder="0"></iframe><br/>
+      	<iframe id="cal3" src="http://www.calcxml.com/do/inv05?teaser" height="300" width="340" frameborder="0"></iframe><br/>
       </div>
     </div>
 
     <div class="col-sm-4">
       <div>
-      	<iframe src="http://www.calcxml.com/do/inv06?teaser" height="300" width="340" frameborder="0"></iframe><br/>
+      	<iframe id="cal4" src="http://www.calcxml.com/do/inv06?teaser" height="300" width="340" frameborder="0"></iframe><br/>
       </div>
     </div>
 
     <div class="col-sm-4">
 			<div>
-				<iframe src="http://www.calcxml.com/do/inv07?teaser" height="300" width="340" frameborder="0"></iframe><br/>
+				<iframe id="cal5" src="http://www.calcxml.com/do/inv07?teaser" height="300" width="340" frameborder="0"></iframe><br/>
 			</div>
     </div>
 
      <div class="col-sm-4">
      	<div>
-     		<iframe src="http://www.calcxml.com/do/inv09?teaser" height="300" width="340" frameborder="0"></iframe><br/>
+     		<iframe id="cal6" src="http://www.calcxml.com/do/inv09?teaser" height="300" width="340" frameborder="0"></iframe><br/>
      	</div>
 		</div>
 
      <div class="col-sm-4">
 			<div>
-				<iframe src="http://www.calcxml.com/do/inv10?teaser" height="300" width="340" frameborder="0"></iframe><br/>
+				<iframe id="cal7" src="http://www.calcxml.com/do/inv10?teaser" height="300" width="340" frameborder="0"></iframe><br/>
 			</div>
     </div>
 
      <div class="col-sm-4">
 			<div>
-				<iframe src="http://www.calcxml.com/do/inv11?teaser" height="300" width="340" frameborder="0"></iframe><br/>
+				<iframe id="cal8" src="http://www.calcxml.com/do/inv11?teaser" height="300" width="340" frameborder="0"></iframe><br/>
 			</div>
     </div>
 
      <div class="col-sm-4">
 			<div>
-				<iframe src="http://www.calcxml.com/do/inv12?teaser" height="300" width="340" frameborder="0"></iframe><br/>
+				<iframe id="cal9" src="http://www.calcxml.com/do/inv12?teaser" height="300" width="340" frameborder="0"></iframe><br/>
 			</div>
     </div>
 
   </div>
 </div>
 
-<a href="http://www.calcxml.com">CalcXML Financial Calculators</a>
+<a href="http://www.calcxml.com">Soure from :CalcXML Financial Calculators</a>
+
+</body>
