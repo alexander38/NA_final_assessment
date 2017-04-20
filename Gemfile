@@ -66,4 +66,9 @@ gem 'bootstrap-sass', '~> 3.3.6'
 #subcription + payment
 gem 'stripe'
 
+group :test, :development do
+  gem 'rspec-rails', '~> 3.5', '>= 3.5.2'
+    gem 'shoulda-matchers', '~> 3.1'
+    gem 'capybara'
+end
 
