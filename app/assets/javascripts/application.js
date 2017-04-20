@@ -25,4 +25,14 @@ $(document).ready(function(){
 	$("#cal7").hide()
 	$("#cal8").hide()
 	$("#cal9").hide()
+
+	$("#edit").hide()
+
+	$("#pro").on("click", function(){
+		if ($("#edit").attr("style") == "display: none;"){
+			$("#edit").show()
+		} else{
+			$("#edit").hide()
+		}
+	})
 })
