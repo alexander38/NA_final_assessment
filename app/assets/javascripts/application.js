@@ -14,3 +14,15 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+$(document).ready(function(){
+	$("#cal1").hide()
+	$("#cal2").hide()
+	$("#cal3").hide()
+	$("#cal4").hide()
+	$("#cal5").hide()
+	$("#cal6").hide()
+	$("#cal7").hide()
+	$("#cal8").hide()
+	$("#cal9").hide()
+})
