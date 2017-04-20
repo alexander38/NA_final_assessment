@@ -26,9 +26,11 @@
 
   <div class="container">
   <div align="center">
+  <% if current_user != nil %>
   <button>
     <%= link_to "Subscribe Today for only $5", user_path(current_user) %></
   </button> 
+  <% end %>
 </div>
 <br>
 
