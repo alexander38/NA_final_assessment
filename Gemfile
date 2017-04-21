@@ -72,3 +72,7 @@ group :test, :development do
     gem 'capybara'
 end
 
+#heroku
+gem 'rails_12factor', group: :production
+
+
