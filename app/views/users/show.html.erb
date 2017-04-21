@@ -11,7 +11,7 @@
 
 
 <div id="edit">
-	<%= form_for(@user, remote: true) do |f| %>
+	<%= form_for @user do |f| %>
 	    <p>
 	      <%= f.label :username %><br>
 	      <%= f.text_area :username %>
